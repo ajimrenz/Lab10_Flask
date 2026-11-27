@@ -1,0 +1,51 @@
+<!-- CELL 10 - REGISTRATION PAGE -->
+
+{% extends 'base.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<h2>Create a New Account</h2>
+    <p>Please fill in the details below:</p>
+
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+
+    <div>
+        {{ form.email.label }}
+        <br>
+        {{ form.email(size=30, class_="input-field") }}<br>
+<small>{{ form.email.description }}</small>
+
+        {% for error in form.email.errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.password.label }}
+        <br>
+        {{ form.password(size=30) }}
+
+        {% for error in form.password.errors %}
+            <p>{{ error }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {{ form.submit(class_="btn btn-primary") }}
+    </div>
+
+</form>
+
+<p>
+    Already have an account?
+
+    <a href="{{ url_for('login') }}">
+        Login here
+    </a>
+</p>
+
+{% endblock %}

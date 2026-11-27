@@ -1,0 +1,13 @@
+# CELL 18 - GITIGNORE
+
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.env
+instance/
+*.db
+*.sqlite
+*.sqlite3
+static/uploads/
+*.pyc

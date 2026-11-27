@@ -1,0 +1,68 @@
+<!-- CELL 11 - STUDENT MANAGEMENT PAGE -->
+
+{% extends 'base.html' %}
+
+{% block title %}Students{% endblock %}
+
+{% block content %}
+
+<h2>Student List</h2>
+<p>Total Students: {{ students|length }}</p>
+
+<form method="POST"
+      action="{{ url_for('add_student') }}">
+
+    <input type="hidden"
+           name="csrf_token"
+           value="{{ csrf_token() }}">
+
+    <input type="text"
+           name="name"
+           placeholder="Full Name"
+           maxlength="150"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="Email"
+           maxlength="150"
+           required>
+
+    <button type="submit">Add Student</button>
+
+</form>
+
+<hr>
+
+<ul>
+
+    {% for student in students %}
+
+        <li>
+
+            <strong>{{ student.full_name }}</strong>
+            ({{ student.email }})
+
+            <form method="POST"
+                  action="{{ url_for('delete_student', id=student.id) }}"
+                  style="display:inline;">
+
+                <input type="hidden"
+                       name="csrf_token"
+                       value="{{ csrf_token() }}">
+
+                <button type="submit">Delete</button>
+
+            </form>
+
+        </li>
+
+    {% else %}
+
+        <li>No students found.</li>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

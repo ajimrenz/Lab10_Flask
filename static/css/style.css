@@ -1,0 +1,79 @@
+/* CELL 04 - CSS STYLESHEET */
+
+body {
+    background-color: #F8F8F8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: #44443B;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #44443B;
+    color: #EC7A1C;
+    padding: 15px;
+}
+
+nav a {
+    color: #EC7A1C;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+header {
+    padding: 15px;
+    background: #9B806E;
+    text-align: center;
+    color: #44443B;
+}
+
+header img {
+    width: 80px;
+    height: auto;
+}
+
+main {
+    padding: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+button,
+input[type="submit"] {
+    background-color: #90462C;
+    color: #E6E4E0;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #EC7A1C;
+}
+
+input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+
+nav a:hover {
+    text-decoration: underline;
+    color: #FFA500;
+}
+
+
+.input-field {
+    border: 2px solid #9B806E;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+form div {
+    margin-bottom: 10px;
+}
