@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+{% block page_heading %}Home{% endblock %}
+{% block page_subheading %}Welcome to the modern academic dashboard{% endblock %}
+
+{% block content %}
+
+<div class="hero">
+    <h2>Hello, I am {{ name }}!</h2>
+    <p>
+        Welcome to my Flask Additional Exercises web application.
+        This system demonstrates role-based student management,
+        user authentication, profile management, and image upload
+        using Flask, SQLAlchemy, and Jinja2 templates.
+    </p>
+    <p><strong>Section:</strong> {{ section }}</p>
+</div>
+
+<div class="grid" style="margin-top: 22px;">
+    <div class="stat-card">
+        <h3>Core Feature 1</h3>
+        <p style="font-size:18px;">Role-Based Access</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Core Feature 2</h3>
+        <p style="font-size:18px;">Student Management</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Core Feature 3</h3>
+        <p style="font-size:18px;">Profile Management</p>
+    </div>
+</div>
+
+{% endblock %}
